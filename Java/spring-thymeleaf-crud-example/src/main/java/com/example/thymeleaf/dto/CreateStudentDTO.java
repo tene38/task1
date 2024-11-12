@@ -19,7 +19,7 @@ public class CreateStudentDTO {
 
     @NotBlank(message = "{NotEmpty.name}")
     @Pattern(
-        regexp = "[- \\w\\d]+", 
+        regexp = "[- .\\w\\d]+", 
         flags = { Pattern.Flag.UNICODE_CASE, Pattern.Flag.CASE_INSENSITIVE }, 
         message="{Pattern.name}"
     )

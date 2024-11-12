@@ -16,10 +16,10 @@ public class ExceptionHandlerController {
                 .addObject("status", HttpStatus.NOT_FOUND.value());
     }
 
-    // @ExceptionHandler(Exception.class)
-    // public ModelAndView defaultExceptionHandler() {
-    //     return new ModelAndView("exception")
-    //             .addObject("status", HttpStatus.INTERNAL_SERVER_ERROR.value());
-    // }
+    @ExceptionHandler(Exception.class)
+    public ModelAndView defaultExceptionHandler() {
+        return new ModelAndView("exception")
+                .addObject("status", HttpStatus.INTERNAL_SERVER_ERROR.value());
+    }
 
 }
